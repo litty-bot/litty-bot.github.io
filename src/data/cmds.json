@@ -1,0 +1,181 @@
+[
+  {
+    "name": "mgdel",
+    "description": "Deletes all users.",
+    "siteDescription": "Deletes all users.",
+    "dev": true
+  },
+  {
+    "name": "profile",
+    "description": "Shows your Lit profile.",
+    "siteDescription": "Shows your Lit profile.",
+    "dev": true
+  },
+  {
+    "name": "start",
+    "description": "Creates a Lit account.",
+    "siteDescription": "Creates a Lit account.",
+    "dev": true
+  },
+  {
+    "name": "bored",
+    "description": "Sends a random thing to try.",
+    "siteDescription": "Sends a random thing to try."
+  },
+  {
+    "name": "catto",
+    "description": "Makes a random lit catto appear.",
+    "siteDescription": "Makes a random lit catto appear."
+  },
+  {
+    "name": "clan",
+    "description": "Creates a clan.",
+    "siteDescription": "Creates a clan.",
+    "aliases": [
+      "c"
+    ],
+    "dev": true
+  },
+  {
+    "name": "doggo",
+    "description": "Makes a random lit doggo appear.",
+    "siteDescription": "Makes a random lit doggo appear."
+  },
+  {
+    "name": "food",
+    "description": "Sends a random picture of food.",
+    "siteDescription": "Sends a random picture of food."
+  },
+  {
+    "name": "foxy",
+    "description": "Makes a random lit foxy appear.",
+    "siteDescription": "Makes a random lit foxy appear."
+  },
+  {
+    "name": "gender",
+    "description": "Predicts the gender of a name.",
+    "siteDescription": "Predicts the gender of a name.",
+    "aliases": [
+      "gen"
+    ]
+  },
+  {
+    "name": "joke",
+    "description": "Finds the best jokes.",
+    "siteDescription": "Finds the best jokes."
+  },
+  {
+    "name": "roast",
+    "description": "Roasts the shakespeare out of you.",
+    "siteDescription": "Roasts the shakespeare out of you."
+  },
+  {
+    "name": "apod",
+    "description": "Uses NASA's APOD api to retrieve a interesting fact.",
+    "siteDescription": "Uses NASA's APOD api to retrieve a interesting fact."
+  },
+  {
+    "name": "country",
+    "description": "Gives information about lit country",
+    "siteDescription": "Gives information about lit country"
+  },
+  {
+    "name": "define",
+    "description": "Defines a specified term from Urban dictionary",
+    "siteDescription": "Defines a specified term from Urban dictionary"
+  },
+  {
+    "name": "number",
+    "description": "Sends a interesting information about a lit number.",
+    "siteDescription": "Sends a interesting information about a lit number.",
+    "aliases": [
+      "num"
+    ]
+  },
+  {
+    "name": "stock",
+    "description": "Shows details of a lit stock.",
+    "siteDescription": "Shows details of a lit stock.",
+    "cooldown": 5
+  },
+  {
+    "name": "weather",
+    "description": "Gets the weather from a certain area.",
+    "siteDescription": "Gets the weather from a certain area."
+  },
+  {
+    "name": "work",
+    "description": "Allows you to work.",
+    "siteDescription": "Allows you to work.",
+    "dev": true
+  },
+  {
+    "name": "ban",
+    "description": "Bans a user.",
+    "siteDescription": "Bans a user."
+  },
+  {
+    "name": "kick",
+    "description": "Kicks an underling from your server.",
+    "siteDescription": "Kicks a user."
+  },
+  {
+    "name": "purge",
+    "description": "Deletes a bunch of messages at once.",
+    "siteDescription": "Deletes a bunch of messages at once."
+  },
+  {
+    "name": "vote",
+    "description": "Gather opinions on a particular subject from your server. Add the `--silent` flag to not ping everyone on the server.",
+    "siteDescription": "Create a vote with a 👍 and 👎."
+  },
+  {
+    "name": "about",
+    "description": "About the bot.",
+    "siteDescription": "About the bot."
+  },
+  {
+    "name": "gh-search",
+    "description": "Search for GitHub accounts.",
+    "siteDescription": "Search for GitHub accounts.",
+    "aliases": [
+      "ghs"
+    ]
+  },
+  {
+    "name": "help",
+    "description": "Lists all commands.",
+    "siteDescription": "Lists all commands."
+  },
+  {
+    "name": "qr",
+    "description": "Generates a QR Code.",
+    "siteDescription": "Generates a QR Code."
+  },
+  {
+    "name": "random",
+    "description": "Returns a random winner",
+    "siteDescription": "Returns a random winner",
+    "aliases": [
+      "r",
+      "rand"
+    ]
+  },
+  {
+    "name": "shortenurl",
+    "description": "Shorterns a URL.",
+    "siteDescription": "Shorterns a URL.",
+    "aliases": [
+      "tinyurl"
+    ]
+  },
+  {
+    "name": "suggestion",
+    "description": "Sends a suggestion to the Lit Enterprises:tm: server.",
+    "siteDescription": "Sends a suggestion to the Lit Enterprises™ server.",
+    "aliases": [
+      "sug",
+      "suggy"
+    ]
+  }
+]
