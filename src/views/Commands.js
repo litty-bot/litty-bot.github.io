@@ -6,7 +6,7 @@ export default function Commands() {
   const [data, setData] = useState();
   async function fetchData() {
     const dataInJSON = await fetch(
-      `https://litty-cors.herokuapp.com/https://litty-bot.herokuapp.com/api/commands`
+      `https://lit-cors.herokuapp.com/https://litty-bot.herokuapp.com/api/commands`
     );
     const data = await dataInJSON.json();
     setData(data);
