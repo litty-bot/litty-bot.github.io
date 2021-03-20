@@ -2,4 +2,4 @@
 
 ### The Perfect bot to enlighten your discord servers
 
-#### Brought to you by [Advaith Malka](advaithmalka.github.io) and [RealTechNerd](realtechnerd.github.io)
+#### Brought to you by [Advaith Malka](https://advaithmalka.github.io) and [RealTechNerd](https://realtechnerd.github.io)
