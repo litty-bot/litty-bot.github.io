@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Container } from "react-bootstrap";
+import { CORS_SERVER_URL, LIT_BOT_SERVER_URL } from "../config";
 
 export default function Commands() {
   const [search, setSearch] = useState("");
   const [data, setData] = useState();
   async function fetchData() {
     const dataInJSON = await fetch(
-      `https://lit-cors.herokuapp.com/https://litty-bot.herokuapp.com/api/commands`
+      `${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/commands`
     );
     const data = await dataInJSON.json();
     setData(data);
@@ -55,13 +56,13 @@ export default function Commands() {
             className="border-0 text-lg"
             style={inputStyle}
             placeholder="Search for commands.."
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={e => setSearch(e.target.value)}
             value={search}
           />
           <Row>
             {data &&
               data
-                .filter((val) => {
+                .filter(val => {
                   if (search === "") {
                     return val;
                   } else if (
@@ -71,7 +72,7 @@ export default function Commands() {
                   }
                 })
                 .map(
-                  (cmd) =>
+                  cmd =>
                     !cmd.dev && (
                       <>
                         <Col sm="4" key={cmd.name}>
