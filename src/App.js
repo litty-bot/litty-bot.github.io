@@ -12,7 +12,7 @@ function App() {
         <NavbarComponent />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/commands" exact component={Commands} />
+          {/* <Route path="/commands" exact component={Commands} /> */}
         </Switch>
       </Router>
     </>

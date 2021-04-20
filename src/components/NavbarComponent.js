@@ -23,9 +23,9 @@ export default function NavbarComponent() {
             <Nav.Link href={inviteLink} target="_blank">
               Invite
             </Nav.Link>
-            <Link className="hover:no-underline nav-link" to="/commands">
+            {/* <Link className="hover:no-underline nav-link" to="/commands">
               Commands
-            </Link>
+            </Link> */}
             <Nav.Link href={topGGLink} target="_blank">
               Vote
             </Nav.Link>
