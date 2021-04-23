@@ -39,7 +39,6 @@ export default function Commands() {
       <h1 style={{ fontFamily: "Manrope" }} className="text-6xl">
         Loading..
       </h1>
-      <h3 style={{ fontFamily: "Julius Sans One" }}>lit&#8482;</h3>
     </div>
   ) : (
     <>
@@ -55,14 +54,14 @@ export default function Commands() {
             type="text"
             className="border-0 text-lg"
             style={inputStyle}
-            placeholder="Search for commands.."
-            onChange={e => setSearch(e.target.value)}
+            placeholder={`Search for ${data.length} commands..`}
+            onChange={(e) => setSearch(e.target.value)}
             value={search}
           />
           <Row>
             {data &&
               data
-                .filter(val => {
+                .filter((val) => {
                   if (search === "") {
                     return val;
                   } else if (
@@ -72,7 +71,7 @@ export default function Commands() {
                   }
                 })
                 .map(
-                  cmd =>
+                  (cmd) =>
                     !cmd.dev && (
                       <>
                         <Col sm="4" key={cmd.name}>
