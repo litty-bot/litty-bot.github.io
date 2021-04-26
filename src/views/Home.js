@@ -24,13 +24,13 @@ export default function Home() {
           <h4 className="mb-3">
             The perfect multi-purpose bot by Lit&#8482; Enterprises.
           </h4>
-          {/* <Link
-						to="/commands"
-						className="b text-white rounded-sm home-btn text-2xl"
-						style={{ backgroundColor: "#7289DA" }}
-					>
-						Commands
-					</Link> */}
+          <Link
+            to="/commands"
+            className="b text-white rounded-sm home-btn text-2xl"
+            style={{ backgroundColor: "#7289DA" }}
+          >
+            Commands
+          </Link>
           <a
             className="ml-2 b rounded-sm hover:text-black home-btn text-2xl mt-2"
             style={{ backgroundColor: "#FF0" }}

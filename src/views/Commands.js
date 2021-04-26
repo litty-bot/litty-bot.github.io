@@ -28,6 +28,7 @@ export default function Commands() {
     color: "#fff",
     fontFamily: "Manrope",
     outline: "none",
+    width: "100%",
   };
 
   /* 
