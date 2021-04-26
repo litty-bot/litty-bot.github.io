@@ -1,0 +1,7 @@
+{
+  "CORS_SERVER_URL": "https://lit-cors.herokuapp.com/",
+  "LIT_BOT_SERVER_URL": "https://litbot.advaithm26.repl.co/",
+  "BOT_ID": "808034778393608244",
+  "INVITE_LINK": "https://discord.com/api/oauth2/authorize?client_id=808034778393608244&permissions=2453143367&scope=bot",
+  "DISCORD_SERVER_LINK": "https://discord.gg/ADvWvmgKYd"
+}

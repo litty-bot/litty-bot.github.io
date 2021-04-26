@@ -3,11 +3,8 @@ import { Container } from "react-bootstrap";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-
+import { INVITE_LINK, DISCORD_SERVER_LINK } from "../config.json";
 export default function Home() {
-  const inviteLink =
-    "https://ptb.discord.com/api/oauth2/authorize?client_id=808034778393608244&permissions=8&scope=bot";
-  const discordServerInviteLink = "https://discord.gg/ADvWvmgKYd";
   return (
     <div>
       <div
@@ -34,16 +31,18 @@ export default function Home() {
           <a
             className="ml-2 b rounded-sm hover:text-black home-btn text-2xl mt-2"
             style={{ backgroundColor: "#FF0" }}
-            href={inviteLink}
+            href={INVITE_LINK}
             target="_blank"
+            rel="noreferrer"
           >
             <Icon icon={faDiscord} /> Invite
           </a>
           <a
             className="ml-2 b text-white rounded-sm home-btn text-2xl mt-2"
             style={{ backgroundColor: "#7289DA" }}
-            href={discordServerInviteLink}
+            href={DISCORD_SERVER_LINK}
             target="_blank"
+            rel="noreferrer"
           >
             <Icon icon={faDiscord} /> Official Server
           </a>

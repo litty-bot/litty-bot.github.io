@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Container } from "react-bootstrap";
-import { CORS_SERVER_URL, LIT_BOT_SERVER_URL } from "../config";
+import { CORS_SERVER_URL, LIT_BOT_SERVER_URL } from "../config.json";
 
 export default function Commands() {
   const [search, setSearch] = useState("");
@@ -56,36 +56,32 @@ export default function Commands() {
             className="border-0 text-lg"
             style={inputStyle}
             placeholder={`Search for ${data.length} commands..`}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={e => setSearch(e.target.value)}
             value={search}
           />
           <Row>
-            {data &&
-              data
-                .filter((val) => {
-                  if (search === "") {
-                    return val;
-                  } else if (
-                    val.name.toLowerCase().includes(search.toLowerCase())
-                  ) {
-                    return val;
-                  }
-                })
-                .map(
-                  (cmd) =>
-                    !cmd.dev && (
-                      <>
-                        <Col sm="4" key={cmd.name}>
-                          <Card style={cardStyle} className="mt-4">
-                            <Card.Body>
-                              <h3>{cmd.name}</h3>
-                              <p className="mb-0">{cmd.siteDescription}</p>
-                            </Card.Body>
-                          </Card>
-                        </Col>
-                      </>
-                    )
-                )}
+            {data
+              ?.filter(val => {
+                if (search === "") return val;
+                else if (
+                  val.name.toLowerCase().includes(search.toLowerCase())
+                ) {
+                  return val;
+                }
+              })
+              .map(
+                cmd =>
+                  !cmd.dev && (
+                    <Col sm="4" key={cmd.name}>
+                      <Card style={cardStyle} className="mt-4">
+                        <Card.Body>
+                          <h3>{cmd.name}</h3>
+                          <p className="mb-0">{cmd.siteDescription}</p>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  )
+              )}
           </Row>
         </Container>
         <br />

@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavbarComponent from "./components/NavbarComponent";
 import Home from "./views/Home";
 import Commands from "./views/Commands";
-import { LIT_BOT_SERVER_URL } from "./config";
+import { LIT_BOT_SERVER_URL, CORS_SERVER_URL } from "./config.json";
 
 function App() {
-  fetch(LIT_BOT_SERVER_URL);
+  fetch(`${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}/api/status`);
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
