@@ -8,9 +8,7 @@ export default function Commands() {
   const [status, setStatus] = useState();
 
   async function checkStatus() {
-    const ok = await fetch(
-      `${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/commands`
-    );
+    const ok = await fetch(`${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/status`);
     setStatus(ok.status);
   }
 
