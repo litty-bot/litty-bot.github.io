@@ -31,10 +31,6 @@ export default function Commands() {
     width: "100%",
   };
 
-  /* 
- 
-  */
-
   return !data ? (
     <div className="text-white text-center mt-48">
       <h1 style={{ fontFamily: "Manrope" }} className="text-6xl">
