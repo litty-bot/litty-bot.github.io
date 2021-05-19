@@ -5,6 +5,13 @@ import { CORS_SERVER_URL, LIT_BOT_SERVER_URL } from "../config.json";
 export default function Commands() {
   const [search, setSearch] = useState("");
   const [data, setData] = useState();
+  const [status, setStatus] = useState();
+
+  async function checkStatus() {
+    const ok = await fetch(`${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/status`);
+    setStatus(ok.status);
+  }
+
   async function fetchData() {
     const dataInJSON = await fetch(
       `${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/commands`
@@ -13,6 +20,7 @@ export default function Commands() {
     setData(data);
   }
   useEffect(() => {
+    checkStatus();
     fetchData();
   }, []);
 
@@ -30,8 +38,13 @@ export default function Commands() {
     outline: "none",
     width: "100%",
   };
-
-  return !data ? (
+  return status !== 200 ? (
+    <div className="text-white text-center mt-48">
+      <h1 style={{ fontFamily: "Manrope" }} className="text-4xl">
+        Sorry, but Lit Bot is down. Please check again later.
+      </h1>
+    </div>
+  ) : !data ? (
     <div className="text-white text-center mt-48">
       <h1 style={{ fontFamily: "Manrope" }} className="text-6xl">
         Loading..

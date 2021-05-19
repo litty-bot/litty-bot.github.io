@@ -33,3 +33,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.indicateGreen {
+  text-shadow: 0 0 12px #1bc47d;
+  color: #1bc47d !important;
+  cursor: default !important;
+}
+.indicateRed {
+  text-shadow: 0 0 12px #bb1e10;
+  color: #bb1e10 !important;
+  cursor: default !important;
+}
