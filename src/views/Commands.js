@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Container } from "react-bootstrap";
 import { CORS_SERVER_URL, LIT_BOT_SERVER_URL } from "../config.json";
+import checkStatus from "../util/checkStatus";
 
 export default function Commands() {
   const [search, setSearch] = useState("");
   const [data, setData] = useState();
-  const [status, setStatus] = useState();
-
-  async function checkStatus() {
-    const ok = await fetch(`${CORS_SERVER_URL}${LIT_BOT_SERVER_URL}api/status`);
-    setStatus(ok.status);
-  }
+  const [status, setStatus] = useState(null);
 
   async function fetchData() {
     const dataInJSON = await fetch(
@@ -20,7 +16,7 @@ export default function Commands() {
     setData(data);
   }
   useEffect(() => {
-    checkStatus();
+    checkStatus(setStatus);
     fetchData();
   }, []);
 
@@ -38,10 +34,10 @@ export default function Commands() {
     outline: "none",
     width: "100%",
   };
-  return status !== 200 ? (
+  return status && status !== 200 ? (
     <div className="text-white text-center mt-48">
       <h1 style={{ fontFamily: "Manrope" }} className="text-4xl">
-        Sorry, but Lit Bot is down. Please check again later.
+        Unfortunately, Lit Bot is down. Please check again later.
       </h1>
     </div>
   ) : !data ? (
@@ -64,18 +60,19 @@ export default function Commands() {
             type="text"
             className="border-0 text-lg"
             style={inputStyle}
-            placeholder={`Search for ${data.length} commands..`}
+            placeholder={`Search ${data.length} commands..`}
             onChange={e => setSearch(e.target.value)}
             value={search}
           />
           <Row>
             {data
-              ?.filter(val => {
-                if (search === "") return val;
+              ?.filter(command => {
+                if (!search) return command;
                 else if (
-                  val.name.toLowerCase().includes(search.toLowerCase())
+                  command.name.toLowerCase().includes(search.toLowerCase()) ||
+                  command.aliases?.includes(search.toLowerCase())
                 ) {
-                  return val;
+                  return command;
                 }
               })
               .map(
@@ -85,7 +82,7 @@ export default function Commands() {
                       <Card style={cardStyle} className="mt-4">
                         <Card.Body>
                           <h3>{cmd.name}</h3>
-                          <p className="mb-0">{cmd.siteDescription}</p>
+                          <p className="mb-0">{cmd.description}</p>
                         </Card.Body>
                       </Card>
                     </Col>
